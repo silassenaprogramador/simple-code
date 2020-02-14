@@ -72,7 +72,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="#">GitHub</a>
+                    <a href="https://github.com/silassenaprogramador/simple-code">GitHub</a>
                 </div>
             </div>
             
