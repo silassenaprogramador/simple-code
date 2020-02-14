@@ -23,3 +23,11 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?/$1 [L]
 ```
+No arquivo System/Constant.php configurar o dominio em que o projeto esta sendo executado :
+
+```
+const BASE_URL = 'http://localhost/simple-code'; /* http://www.seuprojeto.com.br */
+```
+
+
+
