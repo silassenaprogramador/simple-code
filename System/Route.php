@@ -20,16 +20,6 @@ class Route{
         return $url_atual;
     }
 
-    /**
-     * 
-     */
-    private function formataParamentros($array_paramentros){
-
-        $result = '';
-        foreach($array_paramentros as $item){ $result .= $item .","; }
-        if($result!=''){substr($result, 0, -1);}
-        return  $result;
-    }
 
     /**
      * Constroi a rota e redireciona para classe
@@ -76,33 +66,12 @@ class Route{
         }
 
         if($found){
+
             $objController = new $name_controller;
-            switch (count($params)) {
-                case 0:
-                    $objController->$action();
-                break;
-                case 1:
-                    $objController->$action($params[0]);
-                break;
-                case 2:
-                    $objController->$action($params[0],$params[1]);
-                break;
-                case 3:
-                    $objController->$action($params[0],$params[1],$params[2]);
-                break;
-                case 4:
-                    $objController->$action($params[0],$params[1],$params[2],$params[3]);
-                break;
-                case 5:
-                    $objController->$action($params[0],$params[1],$params[2],$params[3],$params[4]);
-                break;
-                case 6:
-                    $objController->$action($params[0],$params[1],$params[2],$params[3],$params[4],$params[5]);
-                break;
-            }
+            $objController->$action(implode(',',$params));
+
         }else{
-         
-              require_once ( __DIR__ . "/Errors/404.php");
+            require_once ( __DIR__ . "/Errors/404.php");
         }
 
 
