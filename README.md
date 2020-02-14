@@ -19,3 +19,5 @@ RewriteBase /diretorio-projeto/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?/$1 [L]
+
+http://i.imgur.com/SgsdtyY.png
