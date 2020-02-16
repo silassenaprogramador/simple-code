@@ -5,10 +5,10 @@ namespace Ssp\System;
 class Database 
 {
 
-    private static $dbName = 'seokeywords';
-    private static $dbHost = 'localhost';
-    private static $dbUsername = 'root';
-    private static $dbUserPassword = '*****';
+    private static $dbName = DB_NAME;
+    private static $dbHost = DB_HOST;
+    private static $dbUsername = DB_USERNAME;
+    private static $dbUserPassword = DB_PASSWORD;
     private static $conn = null;
 
     public function __construct() {
