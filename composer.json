@@ -4,5 +4,8 @@
             "Ssp\\App\\":"App/",
 	        "Ssp\\System\\":"System/"	
         }
+    },
+    "require": {
+        "illuminate/database": "^6.17"
     }
 }

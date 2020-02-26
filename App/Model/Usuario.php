@@ -2,17 +2,15 @@
 
 namespace Ssp\App\Model;
 
-use Ssp\System\Model;
+use Illuminate\Database\Eloquent\Model;
 
 class Usuario extends Model
 {
 
-    protected $primary_key = "id";
-    protected $fields = ["nome","email","senha"];
-    protected $table = "usuario";
+    protected $table = 'usuario';
+    protected $primaryKey = 'id';
+    protected $fillable = ["nome","email","senha"];
+    protected $timestamp = false;
 
-    public function __construct(){
-       
-       $this->db = self::connect();
-    }
+    
 }
