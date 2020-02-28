@@ -3,7 +3,7 @@
 namespace Ssp\App\Controller;
 
 use Ssp\System\Controller;
-use Ssp\App\Model\Usuario;
+
 
 class HomeController extends Controller{
 
@@ -20,13 +20,6 @@ class HomeController extends Controller{
      * 
      */
     public function exemplo(){
-
-
-      $lista = Usuario::all();
-
-      foreach($lista as $user){
-        echo $user->nome . "<br>";
-      }
 
 	  	echo "exemplo";		
     }
